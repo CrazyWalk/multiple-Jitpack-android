@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation deps.androidx.compat
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.recyclerview
+    implementation project(':android-sample-annotation')
+
+
+    testImplementation deps.junit
+    androidTestImplementation deps.androidx.test.junit
+    androidTestImplementation deps.androidx.test.espresso_core
+}
+
+apply from: file('upload.gradle')

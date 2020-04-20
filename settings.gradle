@@ -1,2 +1,4 @@
 rootProject.name='multiple-Jitpack-android'
 include ':app'
+include ':android-sample'
+include ':android-sample-annotation'
