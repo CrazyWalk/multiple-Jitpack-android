@@ -1,20 +1,20 @@
 apply plugin: 'com.github.dcendents.android-maven'
 
-//group = 'com.github.CrazyWalk:multiple-Jitpack-android'
-//version = '1.0.0'
-//
-//task sourcesJar(type: Jar, dependsOn: classes) {
-//    classifier  'sources'
-//    from sourceSets.main.allSource
-//}
-//
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier  'javadoc'
-//    from javadoc.destinationDir
-//}
-//
-//artifacts {
-//    archives sourcesJar
-//    archives javadocJar
-//}
+group = 'com.github.CrazyWalk'
+version = '1.0.2'
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier  'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier  'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
 
