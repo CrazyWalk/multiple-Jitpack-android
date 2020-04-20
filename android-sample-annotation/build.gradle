@@ -8,4 +8,4 @@ dependencies {
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
-apply from: file('upload.gradle')
+//apply from: file('upload.gradle')
