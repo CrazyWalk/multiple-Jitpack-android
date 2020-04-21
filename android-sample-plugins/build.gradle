@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:transform-api:1.5.0'
+    implementation 'com.android.tools.build:gradle:3.6.2'
+
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+uploadArchives {
+    repositories.mavenDeployer {
+        pom.version = '0.0.1'
+        pom.artifactId = 'SamplePlugin'
+        pom.groupId = 'com.luyinbros.demo.plugin'
+        repository(url: "file:///Users/gradlePlugins/")
+    }
+}
